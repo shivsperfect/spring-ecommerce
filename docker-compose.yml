@@ -1,0 +1,14 @@
+services:
+  db:
+    image: mysql:8.4
+    container_name: mysql84
+    environment:
+      MYSQL_DATABASE: spring-ecommerce
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysqldata:/var/lib/mysql
+volumes:
+  mysqldata:
+    driver: local

@@ -2,8 +2,11 @@ spring:
   application:
     name: store
   datasource:
-    url: jdbc:mysql://localhost:3306/store_api?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/spring-ecommerce?createDatabaseIfNotExist=true
     username: root
-    password: MyPassword!
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     show-sql: true
+    hibernate:
+      ddl-auto: none
